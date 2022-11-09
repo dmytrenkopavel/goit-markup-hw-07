@@ -35,21 +35,20 @@
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
   }
+  .social-network-link:hover,
+  .social-network-link:focus {
+    background-color: #2196f3;
+  }
 }
 
-.social-foot-list .social-network-link:hover,
-.social-foot-list .social-network-link:focus {
-  background-color: #2196f3;
-}
-.social-network-box .social-network-svg > use {
+.social-network-svg {
   fill: #ffffff;
 }
-
 .footer-item {
   margin-bottom: 9px;
-}
-.footer-item:last-child {
-  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .adress {
