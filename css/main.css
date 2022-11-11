@@ -98,8 +98,24 @@ img {
   margin-left: auto;
 }
 
-.nav-btn:focus,
-.nav-btn:hover {
+.nav-btn {
+  font-family: inherit;
+  color: var(--title-color);
+  background: #f5f4fa;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  letter-spacing: 0.03em;
+  border: 0;
+  border-radius: 4px;
+  padding: 6px 22px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background, color, box-shadow;
+}
+.nav-btn:focus, .nav-btn:hover {
   background: var(--blue-color);
   color: var(--main-bcg-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -133,7 +149,7 @@ img {
   /* outline: 1px solid tomato; */
 }
 
-.section-title {
+.title-main {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -143,12 +159,12 @@ img {
   margin-bottom: 50px;
 }
 
-.advantage-position {
+.advantage {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.advantage-list {
+.advantage__list {
   display: flex;
   gap: 30px;
   padding-left: 0;
@@ -158,7 +174,7 @@ img {
   width: 270px;
 }
 
-.advantage-box {
+.advantage__box {
   height: 120px;
   margin-bottom: 30px;
   background: #f5f4fa;
@@ -168,12 +184,12 @@ img {
   align-items: center;
 }
 
-.advantage-svg {
+.advantage__svg {
   width: 70px;
   height: 70px;
 }
 
-.advantage-title {
+.advantage__title {
   margin-top: 0;
   margin-bottom: 10px;
   font-weight: 700;
@@ -184,30 +200,30 @@ img {
   color: var(--title-color);
 }
 
-.advantage-text {
+.advantage__text {
   line-height: 1.71;
   color: var(--text-color);
 }
 
-.bcg-teem {
+.team {
   background-color: #f5f4fa;
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.person-list {
+.team__item {
   text-align: center;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.name-person {
+.person {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.title {
+.person__title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -215,7 +231,17 @@ img {
   color: var(--title-color);
 }
 
-.social-network-list {
+.person__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+  margin-top: 10px;
+}
+
+.social-network__list {
   display: flex;
   margin-top: 16px;
   gap: 10px;
@@ -223,21 +249,21 @@ img {
   padding-left: 0;
 }
 
-.social-network-link {
+.social-network__link {
   width: 44px;
   height: 44px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #afb1b8;
-  transition-property: color, background-color;
+  color: var(--main-bcg-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.social-network-link:focus, .social-network-link:hover {
+.social-network__link:focus, .social-network__link:hover {
   background-color: #2196f3;
-  color: var(--main-bcg-color);
 }
 
 .logo-company {
@@ -245,23 +271,28 @@ img {
   padding-bottom: 94px;
 }
 
-.social-network-svg {
+.social-network__svg {
   width: 20px;
   height: 20px;
-  fill: currentColor;
+  fill: #afb1b8;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-network__link:hover .social-network__svg, .social-network__link:focus .social-network__svg {
+  fill: #ffffff;
 }
 
-.logo-company-title {
+.logo-company__title {
   margin-bottom: 50px;
 }
 
-.logo-company-list {
+.logo-company__list {
   display: flex;
   gap: 30px;
   padding-left: 0;
 }
 
-.logo-company-svg {
+.logo-company__svg {
   width: 106px;
   height: 60px;
   display: flex;
@@ -269,11 +300,11 @@ img {
   transition: fill 250ms linear;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.logo-company-link:hover .logo-company-svg, .logo-company-link:focus .logo-company-svg {
+.logo-company-link:hover .logo-company__svg, .logo-company-link:focus .logo-company__svg {
   fill: #2196f3;
 }
 
-.logo-company-link {
+.logo-company__link {
   display: flex;
   width: 170px;
   height: 92px;
@@ -286,7 +317,7 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.logo-company-link:hover, .logo-company-link:focus {
+.logo-company__link:hover, .logo-company__link:focus {
   color: var(--blue-color);
 }
 
@@ -320,22 +351,37 @@ img {
   align-items: baseline;
 }
 
-.social-foot-list {
+.social-foot__list {
   display: flex;
   gap: 10px;
   padding-left: 0;
 }
-.social-foot-list .social-network-link {
+
+.social-foot__link {
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-bcg-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.social-foot-list .social-network-link:hover,
-.social-foot-list .social-network-link:focus {
+.social-foot__link:focus, .social-foot__link:hover {
   background-color: #2196f3;
+  color: var(--main-bcg-color);
+}
+.social-foot__link:focus .social-foot__svg, .social-foot__link:hover .social-foot__svg {
+  fill: #ffffff;
 }
 
-.social-network-svg {
-  fill: #ffffff;
+.social-foot__svg {
+  height: 20px;
+  width: 20px;
+  fill: currentColor;
 }
 
 .footer-item {
@@ -811,24 +857,6 @@ img {
 .main-sect {
   padding-top: 94px;
   padding-bottom: 94px;
-}
-
-.nav-btn {
-  font-family: inherit;
-  color: var(--title-color);
-  background: #f5f4fa;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.63;
-  text-align: center;
-  letter-spacing: 0.03em;
-  border: 0;
-  border-radius: 4px;
-  padding: 6px 22px;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: background, color, box-shadow;
 }
 
 .portpholio-list {
