@@ -610,7 +610,7 @@ img {
 
 .overlay {
   background-color: #2f303a;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../goit-markup-hw-04/img/hero.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -807,7 +807,7 @@ img {
 .checkbox:checked + .icon {
   border-color: #2196f3;
   background-color: #2196f3;
-  background-image: url(../goit-markup-hw-06/img/icon.svg);
+  background-image: url(../img/icon.svg);
   background-size: contain;
   border-radius: 2px;
   background-origin: border-box;
@@ -925,7 +925,7 @@ img {
   transition-property: box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portpholio-link :hover, .portpholio-link :focus {
+.portpholio-link:hover, .portpholio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 

@@ -6,7 +6,7 @@
 .overlay {
   background-color: #2f303a;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../goit-markup-hw-04/img/hero.jpg);
+    url(../img/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -184,7 +184,7 @@
 .checkbox:checked + .icon {
   border-color: #2196f3;
   background-color: #2196f3;
-  background-image: url(../goit-markup-hw-06/img/icon.svg);
+  background-image: url(../img/icon.svg);
   background-size: contain;
   border-radius: 2px;
   background-origin: border-box;
